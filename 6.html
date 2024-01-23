@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="inputValue">
+        <button id="addButton">Thêm</button>
+    </div>
+    <li id="list"></li>
+    <script>
+        let inputValue = document.querySelector("#inputValue");
+        let addButton = document.querySelector("#addButton")
+        let list = document.getElementById("list");
+        addButton.addEventListener("click", function() {
+            let value = inputValue.value;
+            if(value !== "" ) {
+                let listItem = document.createElement("li");
+                listItem.textContent = value;
+                list.appendChild(listItem);
+                inputValue.value = "";
+            }
+        })    
+    </script>
+</body>
+</html>

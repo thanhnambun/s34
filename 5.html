@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <script>
+        let names = ["Nguyễn Thu Uyên","Nguyễn Thành Nam","Nguyễn Khánh Ngọc"]
+       for(let key in names){
+        let listItem = document.createElement("li");
+        listItem.innerText=names[key]
+        document.body.appendChild(listItem)
+       }
+    </script>
+</body>
+</html>

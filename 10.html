@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Cả ba thuộc tính innerText, textContent và innerHTML đều liên quan đến việc thao tác nội dung của các phần tử trong HTML. Dưới đây là sự khác biệt giữa chúng:
+
+    innerText: Thuộc tính innerText trả về hoặc thiết lập văn bản hiển thị của một phần tử và tất cả các phần tử con của nó. Nó xử lý văn bản như một chuỗi thuần túy và không bao gồm các thẻ HTML. Nếu một phần tử có thuộc tính style được sử dụng để ẩn nội dung (display: none), thì innerText sẽ không trả về nội dung ẩn đó.
+
+    textContent: Thuộc tính textContent trả về hoặc thiết lập toàn bộ nội dung văn bản của một phần tử và tất cả các phần tử con của nó, bao gồm cả văn bản và các thẻ HTML. Nó coi mọi thứ như là văn bản thuần túy và không xử lý các thẻ HTML như là các phần tử.
+
+    innerHTML: Thuộc tính innerHTML trả về hoặc thiết lập nội dung HTML của một phần tử và tất cả các phần tử con của nó. Nó cho phép bạn thao tác với các thẻ HTML bên trong phần tử. Khi sử dụng để thiết lập giá trị, nó cũng có thể chấp nhận các đoạn mã HTML và tạo ra các phần tử và cấu trúc HTML tương ứng.
+    <div id="example">
+        <strong>Hello</strong> <span>world!</span>
+      </div>
+      <script>
+        var element = document.getElementById("example");
+
+        console.log(element.innerText);    
+        console.log(element.textContent);  
+        console.log(element.innerHTML);    
+      </script>
+      Trong ví dụ này, chúng ta có một phần tử <div> với một phần tử <strong> và <span> bên trong. Khi chúng ta truy cập các thuộc tính innerText, textContent và innerHTML của phần tử, chúng ta thu được kết quả khác nhau.
+
+        innerText và textContent trả về nội dung văn bản thuần túy của phần tử và tất cả các phần tử con của nó, bao gồm cả các thẻ HTML. Trong trường hợp này, cả hai thuộc tính đều trả về chuỗi "Hello world!" mà không bao gồm các thẻ <strong> và <span>.
+        
+        innerHTML trả về nội dung HTML của phần tử và tất cả các phần tử con của nó. Trong trường hợp này, innerHTML trả về chuỗi "<strong>Hello</strong> <span>world!</span>" bao gồm cả các thẻ HTML.
+</body>
+</html>
